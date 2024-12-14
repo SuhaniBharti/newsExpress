@@ -1,6 +1,6 @@
 NEWSAPP
 
-I created a news app that provides the latest news on different topics in one place. Users can browse and stay updated on categories like sports, technology, health, and more. The app is designed to make it easy to find and read news based on individual interests.
+Created a news app that provides the latest news on different topics in one place. Users can browse and stay updated on categories like sports, technology, health, and more. The app is designed to make it easy to find and read news based on individual interests.
 
 
 Component Structure:The website is developed using modular React components:
