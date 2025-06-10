@@ -1,69 +1,39 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
-  
-// import PropTypes from 'prop-types'
 
-//
-//   static propTypes = {
-//     country:'in',
-//     pageSize:8
 
-//   }
-//   static propTypes={
-//     country
-//   }
+import './App.css';
 
-// export class NavBar extends Component {
- 
-const NavBar=()=>{
+import React, { Component } from 'react'
+import Navbar from './components/Navbar';
+import News from './components/News';
+import {
+   BrowserRouter as Router,
+   Routes ,
+   Route,
+   
+  } from "react-router-dom";
 
-  
+
+export default class App extends Component {
+    
+  render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div className="container-fluid">
-    <Link className="navbar-brand" to="/">NewsExpress</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/">Home</Link>
-        </li>
-        {/* <li className="nav-item"><link className="nav-link" to="/about">About</link></li> */}
-        <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/general">General</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/Science">Science</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
-        {/*<li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" to="#">Action</a></li>
-            <li><a className="dropdown-item" to="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" to="#">Something else here</a></li>
-          </ul>
-        </li> */}
-        {/* <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li> */}
-      </ul>
-      {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
-    </div>
-  </div>
-</nav>
+        <Router>
+        <Navbar/>
+        <Routes>
+        <Route exact path="/" element={<News pageSize={10} country="us" category="general" />} />
+           <Route exact path="/general" element={<News key="general" pageSize={10} country="us" category="general" />} />
+          <Route exact path="/sports" element={<News key="sports"pageSize={10} country="us" category="sports" />} />
+          <Route exact path="/science" element={<News key="science"pageSize={10} country="us" category="science" />} />
+          <Route exact path="/technology" element={<News key="technology" pageSize={10} country="us" category="technology" />} />
+          <Route exact path="/health" element={<News key="health"pageSize={10} country="us" category="health" />} />
+          <Route exact path="/business" element={<News key="business"pageSize={10} country="us" category="business" />} />
+          <Route exact path="/entertainment" element={<News key="entertainment"pageSize={10} country="us" category="entertainment" />} />
+
+          </Routes>
+       
+        </Router>
       </div>
     )
-  
+  }
 }
-
-export default NavBar
