@@ -30,4 +30,4 @@ Tech Stack
 3. Functionality: JavaScript 
 
 ![image_alt](https://github.com/SuhaniBharti/newsapp/blob/0e19d80848e3fe62779061e567ef183f602c45a3/news.jpg)
-![image_alt](https://github.com/SuhaniBharti/newsapp/blob/546ed6e9e90dc8aee94823c1853e0668ad1ce6db/news2.jpg)
+![image_alt](https://github.com/SuhaniBharti/newsExpress/blob/main/Screenshot%202025-06-10%20203202.png)
