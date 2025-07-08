@@ -29,5 +29,5 @@ Tech Stack
 2. Design: Responsive layout using CSS.
 3. Functionality: JavaScript 
 
-![image_alt](https://github.com/SuhaniBharti/newsapp/blob/0e19d80848e3fe62779061e567ef183f602c45a3/news.jpg)
+
 ![image_alt](https://github.com/SuhaniBharti/newsExpress/blob/main/Screenshot%202025-06-10%20203202.png)
